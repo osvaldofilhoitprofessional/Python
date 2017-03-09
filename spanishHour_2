@@ -1,0 +1,65 @@
+
+def imprime(periodo):
+  
+    if indiceMinuto1 == 1 and indiceMinuto2 == 5:
+        print(periodo + 'son las ' + horaExtenso[indiceHora] + ' ' + 'y' + ' ' + especiales[0])
+
+    elif indiceMinuto1 == 3 and indiceMinuto2 == 0:
+        print(periodo + 'son las ' + horaExtenso[indiceHora] + ' ' + 'y' + ' ' + especiales[1])
+
+    elif indiceMinuto1 == 4 and indiceMinuto2 == 5:
+        print(periodo + 'son las ' + horaExtenso[indiceHora + 1] + ' ' + 'menos' + ' ' + especiales[0])
+
+    else:
+        print(periodo + 'son las ' + horaExtenso[indiceHora] + ' ' + 'y' + ' ' + minutoExtenso[indiceMinuto])
+
+
+
+hora = str(input('Digite a hora no formato HH:MM para saber como seria dita em espanhol: '))
+
+#tupla com as hoas do dia no formato 24h
+horaExtenso = ('cero','uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez',
+               'once', 'doce', 'trece', 'catroce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho',
+               'diecinueve', 'viente', 'vientiuno', 'vientidos', 'vientitrés', 'vienticuatro')
+
+#tupla com todos os minutos
+minutoExtenso = ('cero','uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez',
+                 'once', 'doce', 'trece', 'catroce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho',
+                 'diecinueve', 'viente', 'vientiuno', 'vientidos', 'vientitrés', 'vienticuatro', 'vienticinco',
+                 'vientiséis', 'vientisiete', 'vientiocho', 'vientinueve', 'treinta', 'treinta y uno', 'treinta y dos',
+                 'treinta y tres', 'treinta y cuatro', 'treinta y cinco', 'treinta y seis', 'treinta y siete',
+                 'treinta y ocho', 'treinta y nueve', 'cuarenta', 'cuarenta y uno', 'cuarenta y dos', 'cuarenta y tres',
+                 'cuarenta y cuatro', 'cuarenta y cinco', 'cuarenta y seis', 'cuarenta y siete', 'cuarenta y ocho',
+                 'cuarenta y nueve', 'cincuenta', 'cincuenta y uno', 'cincuenta y dos', 'cincuenta y tres',
+                 'cincuenta y cuatro', 'cincuenta y cinco', 'cincuenta y seis', 'cincuenta y siete, ''cincuenta y ocho',
+                 'cincuenta y nueve')
+                 
+
+#particularidade do idioma espanhol
+especiales = ('cuarto', 'media')
+
+#Variáveis para acessar as tuplas
+indiceHora = int(hora[:2])
+indiceMinuto = int(hora[3:5])
+indiceMinuto1 = int(hora[3])
+indiceMinuto2 = int(hora[4])
+
+manha = 'Buenos dias '
+tarde = 'Buenas tardes '
+noche = 'Buenas noches '
+
+
+if len(hora[:2]) > 2:
+    print('Informe a hora com apenas dois dígitos!')
+
+else:
+
+    if indiceHora >= 00 and indiceHora <= 11:
+        imprime(manha)
+
+    elif indiceHora >= 12 and indiceHora <= 17:
+        imprime(tarde)
+
+    else:
+        imprime(noche)
+
