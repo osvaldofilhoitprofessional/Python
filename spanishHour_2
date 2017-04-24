@@ -17,7 +17,7 @@ def imprime(periodo):
 
 hora = str(input('Digite a hora no formato HH:MM para saber como seria dita em espanhol: '))
 
-#tupla com as hoas do dia no formato 24h
+#tupla com as horas do dia no formato 24h
 horaExtenso = ('cero','uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez',
                'once', 'doce', 'trece', 'catroce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho',
                'diecinueve', 'viente', 'vientiuno', 'vientidos', 'vientitrés', 'vienticuatro')
